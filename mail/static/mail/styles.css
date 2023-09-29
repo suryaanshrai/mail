@@ -1,0 +1,89 @@
+textarea {
+    min-height: 400px;
+}
+
+.mail {
+    border:1px solid black;
+    margin:.3cm;
+    padding: .2cm;
+    text-align:center;
+    display:grid;
+    grid-template-columns: 85% 15%;
+    border-radius:10px;
+}
+
+.mail:hover {
+    outline: 2px solid blue;
+}
+
+.mail > div {
+    display:grid;
+    grid-template-columns:30% 30% 30%;
+}
+
+.mail > div:hover {
+    cursor:pointer;
+}
+
+.viewMail > div {
+    margin: .5cm;
+    padding: .5cm;
+    border: .5px solid gray;
+}
+
+@keyframes enterFromLeft {
+    0% {
+        opacity: 0;
+        margin-left: 3cm;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+@keyframes enterFromBottom {
+    0% {
+        opacity: 0;
+        margin-top: 2cm;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+#username {
+    animation-name: enterFromLeft;
+    animation-duration:2s;
+}
+
+.menu {
+    animation-name: enterFromBottom;
+    animation-duration:2s;
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+hr {
+    border:.5px solid lightgray;
+    text-align:left;
+    animation-name: line;
+    animation-duration: 2.5s;
+}
+
+.view-page-buttons {
+    grid-template-columns: 10% 10%;
+    display: grid;
+    border: none !important;
+    margin-bottom: 0.4cm;
+}
